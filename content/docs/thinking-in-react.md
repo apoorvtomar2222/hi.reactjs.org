@@ -8,17 +8,17 @@ redirect_from:
 prev: composition-vs-inheritance.html
 ---
 
-React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.
+हमारे विचार से जावास्क्रिप्ट के प्रयोग से, बड़ी एवं तेज़ Web ऍप्स बनाने का React एक प्रधान तरीका है । यह हमारे लिए Facebook एंड Instagram में बहुत अच्छे तरह से स्केल भी हुआ।
 
-One of the many great parts of React is how it makes you think about apps as you build them. In this document, we'll walk you through the thought process of building a searchable product data table using React.
+React के बहुत अच्छे पार्ट्स में से एक यह भी है की यह कैसे आपको आपकी ऍप्स को बिल्ड करते समय उनके बारे में सोचने देता है। इस डॉक्यूमेंट में, हम आपको React के प्रयोग से एक खोजने योग्य प्रोडक्ट की डाटा टेबल बनाने के तरीके का थॉट प्रोसेस दिखाएंगे।
 
-## Start With A Mock {#start-with-a-mock}
+## एक मौक से शुरू करते है {#start-with-a-mock}
 
-Imagine that we already have a JSON API and a mock from our designer. The mock looks like this:
+कल्पना कर लीजिये कि हमारे पास हमारे डिज़ाइनर द्वारा पहले से JSON API एवं एक मौक है। मौक कुछ इस तरह का दिकता है:
 
 ![Mockup](../images/blog/thinking-in-react-mock.png)
 
-Our JSON API returns some data that looks like this:
+हमारी JSON API कुछ डाटा लोटांति है जो कुछ इस तरह का दिकता है:
 
 ```
 [
