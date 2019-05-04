@@ -31,17 +31,17 @@ React के बहुत अच्छे पार्ट्स में से
 ];
 ```
 
-## Step 1: Break The UI Into A Component Hierarchy {#step-1-break-the-ui-into-a-component-hierarchy}
+## Step 1: UI को कौम्पोनॅन्टस में तोड़ें {#step-1-break-the-ui-into-a-component-hierarchy}
 
-The first thing you'll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. If you're working with a designer, they may have already done this, so go talk to them! Their Photoshop layer names may end up being the names of your React components!
+सबसे पहले चीज़ जो आप मॉक में करना चाहेंगे वह यह है की हर एक कौम्पोनॅन्ट (एवं सबकौम्पोनॅन्ट) के हर तरफ एक बॉक्स बनाए एवं उनको नाम दे। अगर आप अपने डिज़ाइनर के साथ काम कर रहे है, तो उन्होनें यह पहले से कर रखा होगा, उनसे संपर्क करें। उनके फोटोशॉप लेयर के नाम आपके React कौम्पोनॅन्टस के नाम बन सकते है|
 
-But how do you know what should be its own component? Just use the same techniques for deciding if you should create a new function or object. One such technique is the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
+परन्तु आपको कैसे पता चलेगा की किसको एक अपना कौम्पोनॅन्ट  बनाए? आप वही टेक्निक्स का प्रयोग करे जिसे आप एक नया फंक्शन या ऑब्जेक्ट बनाने में करते है। एक ऐसे टेक्निक्स [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) है ,जिसमे एक कौम्पोनॅन्ट सिर्फ एक ही चीज़ करता है। अगर वह बढ़ना बंद कर देता है तो उसको छोटे सबकौम्पोनॅन्ट में डीकम्पोज़्ड कर दिया जाता है।
 
-Since you're often displaying a JSON data model to a user, you'll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely. That's because UI and data models tend to adhere to the same *information architecture*, which means the work of separating your UI into components is often trivial. Just break it up into components that represent exactly one piece of your data model.
+आप ज्यादा तर "JSON" डाटा मॉडल हि यूजर को दिखातें है, आप यह पाएंगे कि अगर आपका मॉडल सही तरीके से बना है,(एवं परिणाम स्वरुप आपका कौम्पोनॅन्ट स्ट्रक्चर) तो वह मैप भी अचे से होगा। ऐसा इसलिए क्यूंकि UI एवं डाटा मॉडल्स एक हि इनफार्मेशन आर्किटेक्चर का पालन करते है, इसका मतलब अपने कौम्पोनॅन्ट में UI को अलग करना ज़्यदातर त्रिविअल है। सिर्फ उनको कॉम्पोनेन्टस में तोड़ दे जो एक डाटा मॉडल दर्शाते है।
 
 ![Component diagram](../images/blog/thinking-in-react-components.png)
 
-You'll see here that we have five components in our simple app. We've italicized the data each component represents.
+आप यहाँ देखेंगे कि हमारे पास हमारी सिंपल ऍप्स में 5 कौम्पोनॅन्ट है। हमने हर कौम्पोनॅन्ट के डाटा को italicized कर दिया है।
 
   1. **`FilterableProductTable` (orange):** contains the entirety of the example
   2. **`SearchBar` (blue):** receives all *user input*
